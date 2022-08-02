@@ -1,5 +1,7 @@
-const firstName='kelvin'
-const lastName=' Pedroza'
-console.log( 'Meu nome e '+firstName+lastName)
+const numbers=[1,2,3,4,5];
+console.log(numbers)
+const numbersMul = numbers.map(function(number){
+    return number * 2;
+});
 
-console.log(`Meu nome e ${firstName.toUpperCase()}${lastName}`)
+console.log(numbersMul)
