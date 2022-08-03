@@ -1,7 +1,8 @@
-const numbers=[1,2,3,4,5];
-console.log(numbers)
-const numbersMul = numbers.map(function(number){
-    return number * 2;
-});
+const para = document.querySelector('p')
 
-console.log(numbersMul)
+para.addEventListener('click',atualizarNome);
+
+function atualizarNome(){
+    var nome = prompt('Insira um novo nome ');
+    para.textContent='JOgador 1 ' + nome;
+}
