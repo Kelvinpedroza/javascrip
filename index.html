@@ -81,13 +81,14 @@
     }
    
     contagemPalpites++
-    
+       campoPalpite.focus()
+    campoPalpite.value = ''
     
   }
   function configFimDeJogo(){
     campoPalpite.disbled = true
     envioPalpite.disabled = true
-    botaoReinicio = document.createElement('buttom')
+    botaoReinicio = document.createElement('button')
     botaoReinicio.textContent = 'Iniciar novo jogo '
     document.body.appendChild(botaoReinicio)
     botaoReinicio.addEventListener('click', reniciarJogo)
@@ -99,16 +100,14 @@
         reiniciarParas[i].textContent = ''
     }
     botaoReinicio.parentNode.removeChild(botaoReinicio)
-    campoPalpite= false
-    envioPalpite = false
-    campoPalpite.value =''
+    campoPalpite.disabled= false
+    envioPalpite.disabled = false
+    campoPalpite.value = ''
     campoPalpite.focus()
     ultimoResultado.style.backgroundColor ='white'
     numeroAleatorio =Math.floor(Math.random()*100) +1
   } 
-    console.log(contagemPalpites)
-    contagemPalpites++
-    campoPalpite.focus()
-    campoPalpite.value = ''
+    
+    
     envioPalpite.addEventListener('click',conferirPalpite)
 </script>
