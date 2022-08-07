@@ -1,12 +1,4 @@
-/* Exepressões e Operadores
-- expressions
-- Operators
-    birary
-    unary
-    ternary
-*/
+// tyoe conversion (typecasting) vs Type coesion
 
 
-let number = 1
-
-console.log(number)
+console.log(Number('9') + 5)
