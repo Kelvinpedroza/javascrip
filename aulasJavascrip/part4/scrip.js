@@ -1,59 +1,59 @@
-/* ### celsius em fahrenheit 
-
-    Crie uma função que recba uma string em celsius ou fahtrenheit
-    e faça a transformação de uma unidade para a outra
-
-    c = (f-32) * 5/9
-    F = C* 9/5 + 32
 
 
-// Transformar graus fahrenheit em graus celsius
-function transforC(temperature){
-    let temperatureA = Number(temperature)
-    let temperatureC = (temperatureA * 9/5) + 32
-    console.log(`A temperatura em graus Fagenheit e de ${temperatureC.toFixed(2)}`)
-}
 
-// Transfomar graus celcius em Fahenheit
-function transdorF(temperature){
-    
-    let temperatureA = Number(temperature)
-    let temperatureC = (temperatureA - 32) * 5/9
-    console.log(` A temperatura em graus Celsius e de ${temperatureC}`)
-}
+/* Buscando e contando dardos em Arrays 
+    Baseado no Array de livros por Categoria abaixo, faça os seguintes desafios
 
-transforC('4230') // colocar graus C
-transdorF('764.6') // colocar graus F
+    · Contar o número de categoria eo número de livros em cada categoria
+    · Contar o número de autores
+    · Mostrar o livros do Augusto Cury 
+    · Transfomar a function acima em uma function que ira receber o nome do autor e devolver os livros desse autor. 
+
+
 */
 
-function transformDegree(degree){
-    const celsiusExistes = degree.toUpperCase().includes('C')
-    const fahrenheitExists = degree.toUpperCase().includes('F')
+const booksByCtegory =  [
+    {   
+        category: 'Riqueza', 
+        books:[
+            {
+                title: 'Os segredos da mente milionária',
+                author: 'T. Harv Eker'
+            },
+            {
+                title: 'O Homem mais rico da Babilonia',
+                author: 'George S. clason'
+            },
 
-    //Fluxo de error
-    if(!celsiusExistes && !fahrenheitExists){
-        throw new Error('Grau não encontrado')
-    }
+            {
+                title: 'Pai rico , pai Podre',
+                author: 'Robert T. Kiyosaki e Sharon L. Lechter',
+            }
+        
+          
+        ],
 
-    // Fluxo ideal
-    let upadateDegree = Number(degree.toUpperCase().replace("F",""))
-    let formula = (faherenheit) =>(faherenheit-32)* 5/9
-    let degreenSign ='C'
-    
-    // FLuxo alternativo
-    if(celsiusExistes){
-    upadateDegree = Number(degree.toUpperCase().replace("C",""))
-    formula = (celcius) => celcius * 9/5 + 32
-    degreenSign ='F'
+},
+{
+    category: 'Inteligência Emocional',
+    books:[ 
+            {
+                title: 'Você é Emocional ',
+                author: 'Augusto Cury',
+            },
+            {
+                title:'Ansiedade - Como enfrentar o mal do seculo',
+                author:'Ausgusto Cury',
+            },
+           
+            {
+                title:'Os 7 Habitos de pessoas altamente eficazes',
+                author:'Ausgusto Cury',
+            }
 
-    }
+    ],
+},
 
-    return formula(upadateDegree) + degreenSign
-    
-}
-try{
-    console.log(transformDegree('10C'))
-    console.log(transformDegree('50F'))
-}catch(error){
-    console.log(error.message)
-}
+];
+
+console.log(booksByCtegory[0].books[0].title)
