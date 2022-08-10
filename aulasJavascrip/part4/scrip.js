@@ -1,35 +1,59 @@
-/* ## sistema de gastos familiares
+/* ### celsius em fahrenheit 
 
-crie um objeto que possia 2 propriedades, ambas do tipo arry
-    * receitas :[]
-    * despesas: []
+    Crie uma função que recba uma string em celsius ou fahtrenheit
+    e faça a transformação de uma unidade para a outra
+
+    c = (f-32) * 5/9
+    F = C* 9/5 + 32
 
 
-Agora, crie uma função que ira calcular o total de receitas e despesas e irar mostrar uma mensagem se a familia esta com saldo positivo ou negativo, seguindo do valor do saldo 
+// Transformar graus fahrenheit em graus celsius
+function transforC(temperature){
+    let temperatureA = Number(temperature)
+    let temperatureC = (temperatureA * 9/5) + 32
+    console.log(`A temperatura em graus Fagenheit e de ${temperatureC.toFixed(2)}`)
+}
 
+// Transfomar graus celcius em Fahenheit
+function transdorF(temperature){
+    
+    let temperatureA = Number(temperature)
+    let temperatureC = (temperatureA - 32) * 5/9
+    console.log(` A temperatura em graus Celsius e de ${temperatureC}`)
+}
+
+transforC('4230') // colocar graus C
+transdorF('764.6') // colocar graus F
 */
 
-recipe ={
-    revenue:[1000], // saldo
-    expenses:[500] // debito
-}
+function transformDegree(degree){
+    const celsiusExistes = degree.toUpperCase().includes('C')
+    const fahrenheitExists = degree.toUpperCase().includes('F')
 
-
-function familyRecipe(recipe){
-    // recebe o saldo e o debito e calcula o restante
-    
-    let balance = recipe.revenue[0] - recipe.expenses[0];
-    let positivo = balance > recipe.expenses[0]
-    console.log(balance)
-    if(positivo){
-        console.log("O saldo da familia e positivo")
-        
+    //Fluxo de error
+    if(!celsiusExistes && !fahrenheitExists){
+        throw new Error('Grau não encontrado')
     }
-    else{
-        console.log('O saldo da familia e negativo')
-        
+
+    // Fluxo ideal
+    let upadateDegree = Number(degree.toUpperCase().replace("F",""))
+    let formula = (faherenheit) =>(faherenheit-32)* 5/9
+    let degreenSign ='C'
+    
+    // FLuxo alternativo
+    if(celsiusExistes){
+    upadateDegree = Number(degree.toUpperCase().replace("C",""))
+    formula = (celcius) => celcius * 9/5 + 32
+    degreenSign ='F'
+
     }
+
+    return formula(upadateDegree) + degreenSign
     
 }
-
-console.log(familyRecipe(recipe))
+try{
+    console.log(transformDegree('10C'))
+    console.log(transformDegree('50F'))
+}catch(error){
+    console.log(error.message)
+}
