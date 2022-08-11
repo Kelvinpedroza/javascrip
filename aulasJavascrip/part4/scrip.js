@@ -12,7 +12,7 @@
 
 */
 
-const booksByCtegory =  [
+const booksByCategory =  [
     {   
         category: 'Riqueza', 
         books:[
@@ -43,12 +43,12 @@ const booksByCtegory =  [
             },
             {
                 title:'Ansiedade - Como enfrentar o mal do seculo',
-                author:'Ausgusto Cury',
+                author:'Augusto Cury',
             },
            
             {
                 title:'Os 7 Habitos de pessoas altamente eficazes',
-                author:'Ausgusto Cury',
+                author:'Augusto Cury',
             }
 
     ],
@@ -56,4 +56,53 @@ const booksByCtegory =  [
 
 ];
 
-console.log(booksByCtegory[0].books[0].title)
+
+function searchBooks(procurar){
+  
+    let livros = 0
+    let categoria = 0  
+    let autores = 0 
+    booksByCategory.forEach((value)=>{
+        
+        if(value.category){
+            categoria++;
+        }
+        livros += value.books.length
+        
+    });
+
+    booksByCategory.forEach((value1)=>{
+        for( let value2 of value1.books){
+           if(value2.author){
+            autores++
+           }
+        }
+        
+    })
+
+    booksByCategory.forEach((value3)=>{
+        
+        for( let value4 of value3.books){
+            let agust
+            if(value4.author === procurar){
+                agust = value4.title
+                console.log(`O Livro de ${procurar} é ${agust}`)
+            }
+
+        
+        }
+          
+    })
+
+ 
+      
+    console.log(`A quantidade de autores é: ${autores}`)
+    console.log(`A quantidade de livros é: ${livros}`)
+    console.log(`A quantidade de Categorias é: ${categoria}`)
+    
+}
+
+
+searchBooks('George S. clason')
+
+
