@@ -1,0 +1,5 @@
+.conteiner{
+    display: flex; /* por padrão a flex-direction e row */
+    flex-direction: column-reverse;
+
+}
