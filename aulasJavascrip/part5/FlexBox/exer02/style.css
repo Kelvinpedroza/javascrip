@@ -5,12 +5,14 @@
 
 .box {
     
-    /* display: flex; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     border: 1px dashed red
 }
 
 .box div {
-    border: 1px solid;
+    border: 1px solid black;
 
-    /* width: 80px; */
+    width: 200px;
 }

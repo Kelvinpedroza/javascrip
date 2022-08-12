@@ -1,0 +1,27 @@
+/* # justify-content
+- Alinhamento dos elementos dentro do conteiner
+- Distribuição dos elementos
+
+## Valores
+
+- flex-start
+- flex-end
+- center
+- space-around
+- space-between
+- space-evenly
+
+*/
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px dashed red;
+
+}
+
+.box div {
+    border: 1px solid;
+}
+
+
