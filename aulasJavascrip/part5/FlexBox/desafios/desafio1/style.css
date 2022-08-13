@@ -67,5 +67,6 @@ header >a{
     border-radius: 10px;
     text-decoration: none;
     min-width: 10px;
+    font-weight: 300;
 }
 
