@@ -1,0 +1,76 @@
+/* 
+# Propriedades para os itens
+- flex-basis 
+- flex-grow
+- flex-shrink  
+- fex
+- order */
+
+ /* # flex-grow
+
+ - O crescimento do item dentro com container em relação aos espaços vazios */
+
+/* 
+ # flex-shrink 
+ - O encolher do item dentro do conteiner.
+*/
+
+
+.box {
+    display: flex;
+    
+
+
+
+    border: 1px dashed red
+}
+
+.box div {
+    flex-basis: 80px;
+    border: 1px solid;
+    text-align: center;
+    flex: 1 1 40px;
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .box div:nth-child(2){
+    flex-shrink:1;
+}
+
+.box div:nth-child(3){
+    flex-shrink:1;
+}
+ */
+
+
+/* .box div:nth-child(3){
+
+    flex-grow: 1;
+}
+.box div:nth-child(2){
+    flex-grow: 1;
+}
+.box div:nth-child(1){
+    flex-grow: 2;
+} */

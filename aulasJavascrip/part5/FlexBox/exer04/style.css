@@ -1,0 +1,39 @@
+/* 
+
+# align-intems
+
+- Alinhamento deos elementos no eixo cruzado
+
+## valores 
+- stretch
+- flex-start
+- felex-end
+- center */
+
+
+/* 
+# gap
+- Espaços entre os elementos
+
+## valores 
+
+Unidades de medidas
+fixas: px , pt 
+flexíveis: %, em, rem, */ 
+
+
+
+.box{
+    display: flex;
+  
+
+    gap: 3rem;
+    border: 1px dashed red;
+
+    height: 150px;
+
+}
+
+.box div {
+    border: 1px solid;
+}
