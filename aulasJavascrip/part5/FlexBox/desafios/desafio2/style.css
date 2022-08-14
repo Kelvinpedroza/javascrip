@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    min-height: 96vh;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1rem;
+}
+.primeiro{
+
+    border: 2px solid black;
+    display: flex;
+    margin:10px ;
+    flex-basis: 25%;
+    flex-direction: column;
+    height: 600px;
+
+
+    
+    background-color: darkgray;
+
+}
+
+.segundo{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    flex-basis: 75% ;
+    height: 600px;
+
+    
+    margin: 10px;
+    background-color: rgb(231, 225, 225);
+}

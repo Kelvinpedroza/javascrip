@@ -1,0 +1,13 @@
+
+
+button{
+    display: flex;
+    align-items: center;
+    line-height: none;
+    gap:.4rem;
+}
+
+img{
+    height: 15px;
+    width: 15px;
+}

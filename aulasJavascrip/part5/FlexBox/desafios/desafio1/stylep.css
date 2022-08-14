@@ -1,0 +1,22 @@
+header{
+    padding: 4rem;
+    background-color: lightgray;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between; /* Coloca cada item na rua extremidade */
+    align-items: center;
+}
+ul {
+    display: flex;
+    list-style: none; /* tira o efeito da lista */
+    gap:.8rem ; /* coloca espaços entre os itens */
+    align-items: center;
+}
+
+ul li:last-child{
+    background-color: blue;
+    color: white;
+    padding: .8rem ;
+}
