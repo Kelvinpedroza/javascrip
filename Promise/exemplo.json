@@ -1,0 +1,13 @@
+{
+    "nome": "kelvin pedroza",
+    "cidade": "espirito santos",
+    "telefone": 1234567,
+    "livros_favoritos": [
+        "kelvn",
+        "code clear"
+    ],
+    "hobbies": {
+        "semana": "patinação",
+        "fim_de_semana": "cinema"
+    }
+}
