@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import './style.css'
-import { Card } from '../../components/Card'
+import { Card, cardProps } from '../../components/Card'
+type profileResponse = {
+  name: string
+  avatar_url : string
+}
+type user = {
+  name: string
+  avatar: string
+}
 
 export function Home() {
   const [studentName, setStudentName] = useState('');
-  const [students,setStudents] = useState([]);
-  const [user,setUser] = useState({name:'',avatar:''})
+  const [students,setStudents] = useState<cardProps[]>([]);
+  const [user,setUser] = useState<user>({} as user)
   const urlApi = ('https://api.github.com/users/kelvinpedroza')
   function handleAddStudent(){
     const newStudent ={
